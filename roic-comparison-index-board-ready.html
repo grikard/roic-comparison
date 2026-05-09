@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Workflow Economics — Cost Takeout vs. Revenue Intelligence ROIC | Gary Rikard, MBA</title>
+
+<!-- Primary metadata -->
+<meta name="title" content="Workflow Economics — Cost Takeout vs. Revenue Intelligence ROIC | Gary Rikard, MBA">
+<meta name="description" content="A board-ready capital allocation comparison: cost takeout returns are bounded by the expense base; Revenue Intelligence returns scale with the revenue base. The denominator is the entire argument.">
+<meta name="author" content="Gary Rikard">
+<meta name="creator" content="Gary Rikard">
+<meta name="publisher" content="Gary Rikard">
+<meta name="keywords" content="Revenue Intelligence, Workflow Economics, ROIC, cost takeout, capital allocation, enterprise AI, AI strategy, CFO, gross margin, board-ready">
+<meta name="robots" content="index, follow">
+<meta name="language" content="en">
+<meta name="theme-color" content="#102B5C">
+<link rel="canonical" href="https://grikard.github.io/roic-comparison/">
+
+<!-- Open Graph / LinkedIn / Substack link previews -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://grikard.github.io/roic-comparison/">
+<meta property="og:title" content="Cost Takeout vs. Revenue Intelligence ROIC | Workflow Economics">
+<meta property="og:description" content="Same investment, different return surface. A directional sensitivity analysis for Fortune-200 capital allocation discussions.">
+<meta property="og:site_name" content="Gary Rikard">
+<meta property="og:locale" content="en_US">
+
+<!-- X / Twitter preview metadata -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Cost Takeout vs. Revenue Intelligence ROIC | Gary Rikard">
+<meta name="twitter:description" content="Board-ready capital allocation comparison: cost takeout is bounded by the expense base; Revenue Intelligence scales with the revenue base.">
+
+<!-- Search-engine structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "Cost Takeout vs. Revenue Intelligence ROIC",
+  "headline": "Cost Takeout vs. Revenue Intelligence: Same Investment, Different Return Surface",
+  "description": "A board-ready capital allocation comparison showing why cost takeout returns are bounded by the expense base while Revenue Intelligence returns scale with the revenue base.",
+  "author": {
+    "@type": "Person",
+    "name": "Gary Rikard",
+    "sameAs": "https://www.linkedin.com/in/garyrikard"
+  },
+  "creator": {
+    "@type": "Person",
+    "name": "Gary Rikard",
+    "sameAs": "https://www.linkedin.com/in/garyrikard"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Gary Rikard",
+    "sameAs": "https://www.linkedin.com/in/garyrikard"
+  },
+  "url": "https://grikard.github.io/roic-comparison/",
+  "inLanguage": "en",
+  "datePublished": "2026-05-06",
+  "dateModified": "2026-05-06",
+  "keywords": [
+    "Revenue Intelligence",
+    "Workflow Economics",
+    "ROIC",
+    "Cost Takeout",
+    "Capital Allocation",
+    "Enterprise AI",
+    "CFO",
+    "Gross Margin"
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #102B5C;
+    --navy-deep: #0A1F44;
+    --paper: #F7F4ED;
+    --paper-muted: #EFEBE0;
+    --ink: #1A1A1A;
+    --ink-muted: #5A5A5A;
+    --ink-soft: #8A8A85;
+    --rule: rgba(26, 26, 26, 0.12);
+    --rule-strong: rgba(26, 26, 26, 0.25);
+
+    --green-fill: #E8F0E2;
+    --green-stroke: #5A8A3A;
+    --green-text: #2D4A1A;
+
+    --amber-fill: #F5EBD8;
+    --amber-stroke: #B07A1A;
+    --amber-text: #5A3D0A;
+
+    --slate-fill: #E8E5DC;
+    --slate-text: #3A3A38;
+
+    --serif: 'Source Serif 4', Georgia, serif;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --mono: 'JetBrains Mono', 'Courier New', monospace;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    padding: 16px;
+    background: #E9E4DA;
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .page-shell {
+    max-width: 1240px;
+    margin: 0 auto;
+    background: var(--paper);
+    border-radius: 26px;
+    overflow: hidden;
+    box-shadow: 0 10px 28px rgba(16, 43, 92, 0.08), 0 2px 6px rgba(20, 20, 20, 0.05);
+  }
+
+  /* Header band */
+  .header {
+    background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 62%, #173A78 100%);
+    color: #F7F4ED;
+    padding: 54px 36px 58px;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .header::after {
+    content: '';
+    position: absolute;
+    top: -120px;
+    right: -80px;
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    background: radial-gradient(circle at center, rgba(255,255,255,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .header-inner {
+    max-width: 1060px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(247, 244, 237, 0.65);
+    margin: 0 0 18px 0;
+  }
+
+  h1 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(28px, 4.5vw, 44px);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin: 0 0 16px 0;
+    max-width: 920px;
+  }
+
+  .header p {
+    font-family: var(--sans);
+    font-size: clamp(15px, 1.8vw, 17px);
+    line-height: 1.55;
+    color: rgba(247, 244, 237, 0.8);
+    max-width: 780px;
+    margin: 0;
+    font-weight: 400;
+  }
+
+  /* Main content area */
+  main {
+    max-width: 1060px;
+    margin: 0 auto;
+    padding: 52px 36px 34px;
+  }
+
+  .panel-eyebrow {
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin: 0 0 14px 0;
+  }
+
+  h2 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(22px, 2.8vw, 30px);
+    line-height: 1.25;
+    letter-spacing: -0.005em;
+    margin: 0 0 16px 0;
+    color: var(--ink);
+  }
+
+  .lede {
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--ink-muted);
+    max-width: 780px;
+    margin: 0 0 40px 0;
+  }
+
+  section + section {
+    margin-top: 26px;
+  }
+
+  .roic-table,
+  .methodology,
+  .reading > p,
+  .reading > h3,
+  .reading .matrix-ref,
+  .reading .muted {
+    max-width: 860px;
+  }
+
+  /* Comparison table */
+  .roic-table {
+    background: #FDFBF6;
+    border: 1px solid var(--rule-strong);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 32px;
+    box-shadow: 0 1px 0 rgba(26, 26, 26, 0.04);
+  }
+
+  .roic-row {
+    display: grid;
+    grid-template-columns: minmax(180px, 1.6fr) 1fr 1fr;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .roic-row:last-child {
+    border-bottom: none;
+  }
+
+  .roic-row.header-row {
+    background: var(--paper-muted);
+    border-bottom: 1px solid var(--rule-strong);
+  }
+
+  .roic-cell {
+    padding: 18px 24px;
+    font-size: 14.5px;
+    line-height: 1.5;
+    border-right: 1px solid var(--rule);
+  }
+
+  .roic-cell:last-child {
+    border-right: none;
+  }
+
+  .roic-cell.dim-label {
+    font-family: var(--sans);
+    font-weight: 500;
+    color: var(--ink);
+  }
+
+  .roic-cell.col-header {
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    padding: 16px 24px;
+  }
+
+  .roic-cell.col-header.dimension {
+    color: var(--ink-soft);
+  }
+
+  .roic-cell.cost-takeout {
+    color: var(--ink-muted);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .roic-cell.revenue-intel {
+    color: var(--ink);
+    font-variant-numeric: tabular-nums;
+    background: rgba(232, 240, 226, 0.35);
+  }
+
+  .roic-row.highlight-row .roic-cell {
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  .roic-row.highlight-row .roic-cell.revenue-intel {
+    color: var(--green-text);
+    background: var(--green-fill);
+  }
+
+  .roic-row.highlight-row .roic-cell.cost-takeout {
+    color: var(--ink);
+  }
+
+  .roic-row.hurdle-row {
+    background: rgba(247, 244, 237, 0.5);
+  }
+
+  .roic-row.hurdle-row .roic-cell {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--ink-muted);
+  }
+
+  /* Methodology footnote */
+  .methodology {
+    background: var(--paper-muted);
+    border-left: 3px solid var(--navy);
+    padding: 20px 24px;
+    border-radius: 2px;
+    font-size: 13px;
+    line-height: 1.65;
+    color: var(--ink-muted);
+    margin-bottom: 48px;
+  }
+
+  .methodology strong {
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  .methodology .label {
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--navy);
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  /* Reading section */
+  .reading {
+    margin-bottom: 56px;
+  }
+
+  .reading h3 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 1.3;
+    margin: 0 0 14px 0;
+    color: var(--ink);
+  }
+
+  .reading p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--ink);
+    max-width: 780px;
+    margin: 0 0 18px 0;
+  }
+
+  .reading p.muted {
+    color: var(--ink-muted);
+  }
+
+  /* Decision matrix small reference */
+  .matrix-ref {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--rule-strong);
+    border: 1px solid var(--rule-strong);
+    border-radius: 4px;
+    margin: 8px 0 32px;
+    overflow: hidden;
+    max-width: 780px;
+  }
+
+  .matrix-cell {
+    background: #FDFBF6;
+    padding: 18px 22px;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .matrix-cell .label {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin: 0 0 6px 0;
+  }
+
+  .matrix-cell .name {
+    font-family: var(--serif);
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--ink);
+    margin: 0 0 6px 0;
+  }
+
+  .matrix-cell .window {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--ink-soft);
+    margin: 0 0 10px 0;
+  }
+
+  .matrix-cell .desc {
+    color: var(--ink-muted);
+    font-size: 13px;
+  }
+
+  .matrix-cell.automate .label { color: var(--green-stroke); }
+  .matrix-cell.build .label { color: #1F4D8F; }
+  .matrix-cell.sequence .label { color: #6B5028; }
+  .matrix-cell.protect .label { color: #8A4A1F; }
+
+  /* Footer */
+  footer {
+    background: var(--navy);
+    color: rgba(247, 244, 237, 0.78);
+    padding: 34px 36px 42px;
+    margin-top: 22px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .footer-inner {
+    max-width: 1060px;
+    margin: 0 auto;
+  }
+
+  .footer-meta {
+    font-family: var(--sans);
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 0 0 24px 0;
+  }
+
+  .footer-meta strong {
+    color: #F7F4ED;
+    font-weight: 500;
+  }
+
+  .footer-meta a {
+    color: #A8C5F0;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(168, 197, 240, 0.3);
+    transition: border-color 0.15s ease;
+  }
+
+  .footer-meta a:hover {
+    border-bottom-color: #A8C5F0;
+  }
+
+  .footer-section {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(247, 244, 237, 0.5);
+    margin: 0 0 10px 0;
+  }
+
+  .companion-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 0;
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .companion-links a {
+    color: #A8C5F0;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(168, 197, 240, 0.3);
+    transition: border-color 0.15s ease;
+  }
+
+  .companion-links a:hover {
+    border-bottom-color: #A8C5F0;
+  }
+
+  .companion-links .sep {
+    color: rgba(247, 244, 237, 0.3);
+    margin: 0 8px;
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    body { padding: 12px; }
+    .page-shell { border-radius: 22px; }
+    .header { padding: 48px 28px 52px; }
+    main { padding: 44px 28px 28px; }
+    footer { padding: 30px 28px 36px; }
+  }
+
+  @media (max-width: 720px) {
+    body { padding: 10px; }
+    .page-shell { border-radius: 18px; }
+    .header { padding: 34px 20px 40px; }
+    .header::after {
+      top: -100px;
+      right: -110px;
+      width: 250px;
+      height: 250px;
+    }
+    main { padding: 34px 20px 22px; }
+
+    .roic-row {
+      grid-template-columns: 1fr;
+    }
+
+    .roic-cell {
+      border-right: none;
+      border-bottom: 1px solid var(--rule);
+      padding: 14px 18px;
+    }
+
+    .roic-cell:last-child {
+      border-bottom: none;
+    }
+
+    .roic-row.header-row .roic-cell {
+      padding: 12px 18px;
+    }
+
+    .roic-cell.col-header.dimension {
+      display: none;
+    }
+
+    .roic-cell.cost-takeout::before {
+      content: 'Cost takeout · ';
+      font-family: var(--mono);
+      font-size: 10.5px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .roic-cell.revenue-intel::before {
+      content: 'Revenue intelligence · ';
+      font-family: var(--mono);
+      font-size: 10.5px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--green-stroke);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .matrix-ref {
+      grid-template-columns: 1fr;
+    }
+
+    footer {
+      padding: 28px 20px 34px;
+      margin-top: 18px;
+    }
+  }
+
+  @media (max-width: 520px) {
+    h1 { max-width: none; }
+    .eyebrow { letter-spacing: 0.14em; }
+    .roic-table {
+      margin-left: -4px;
+      margin-right: -4px;
+    }
+    .methodology,
+    .matrix-ref {
+      margin-left: 0;
+      margin-right: 0;
+    }
+    .companion-links {
+      display: block;
+    }
+    .companion-links .sep {
+      display: none;
+    }
+    .companion-links a {
+      display: inline-block;
+      margin-right: 10px;
+      margin-bottom: 6px;
+    }
+  }
+
+  /* Print */
+  @media print {
+    body { background: white; }
+    .header { background: white; color: black; padding: 24px 0; }
+    .header p, .eyebrow { color: #444; }
+    .header::after { display: none; }
+    footer { background: white; color: black; padding: 24px 0; border-top: 1px solid #999; }
+    .footer-meta a, .companion-links a { color: black; }
+    main { padding: 24px 0; }
+  }
+</style>
+</head>
+<body>
+<div class="page-shell">
+
+<header class="header">
+  <div class="header-inner">
+    <p class="eyebrow">Workflow Economics — Revenue Intelligence — Capital Allocation</p>
+    <h1>Cost takeout vs. revenue intelligence: same investment, different return surface</h1>
+    <p>A directional sensitivity analysis for Fortune-200 capital allocation discussions. The denominator changes — that is the entire argument.</p>
+  </div>
+</header>
+
+<main>
+
+  <section>
+    <p class="panel-eyebrow">Panel — the comparison</p>
+    <h2>$1B business unit, $2M three-year program cost, two scenarios</h2>
+    <p class="lede">Cost displacement is bounded by the expense removed. Revenue intelligence works on a denominator that scales with the revenue base. Both clear the WACC-adjusted ROIC hurdle of 2.0×; only one keeps compounding past it.</p>
+
+    <div class="roic-table" role="table" aria-label="Capital allocation comparison: cost takeout versus revenue intelligence">
+
+      <div class="roic-row header-row" role="row">
+        <div class="roic-cell col-header dimension" role="columnheader">Dimension</div>
+        <div class="roic-cell col-header" role="columnheader">Cost takeout</div>
+        <div class="roic-cell col-header" role="columnheader" style="color: var(--green-stroke);">Revenue intelligence</div>
+      </div>
+
+      <div class="roic-row" role="row">
+        <div class="roic-cell dim-label" role="rowheader">Denominator</div>
+        <div class="roic-cell cost-takeout" role="cell">Expense base</div>
+        <div class="roic-cell revenue-intel" role="cell">Revenue base</div>
+      </div>
+
+      <div class="roic-row" role="row">
+        <div class="roic-cell dim-label" role="rowheader">Improvement lever</div>
+        <div class="roic-cell cost-takeout" role="cell">$5M expense removed</div>
+        <div class="roic-cell revenue-intel" role="cell">2-pt revenue capture lift</div>
+      </div>
+
+      <div class="roic-row" role="row">
+        <div class="roic-cell dim-label" role="rowheader">Year-1 gross-profit impact</div>
+        <div class="roic-cell cost-takeout" role="cell">~$5M (1× recurring)</div>
+        <div class="roic-cell revenue-intel" role="cell">~$10M (50% margin × $20M)</div>
+      </div>
+
+      <div class="roic-row" role="row">
+        <div class="roic-cell dim-label" role="rowheader">Three-year program cost</div>
+        <div class="roic-cell cost-takeout" role="cell">~$2M</div>
+        <div class="roic-cell revenue-intel" role="cell">~$2M</div>
+      </div>
+
+      <div class="roic-row highlight-row" role="row">
+        <div class="roic-cell dim-label" role="rowheader">Year-1 gross-profit ROIC</div>
+        <div class="roic-cell cost-takeout" role="cell">~2.5×</div>
+        <div class="roic-cell revenue-intel" role="cell">~5.0×</div>
+      </div>
+
+      <div class="roic-row" role="row">
+        <div class="roic-cell dim-label" role="rowheader">Compounding profile</div>
+        <div class="roic-cell cost-takeout" role="cell">Bounded by cost removed</div>
+        <div class="roic-cell revenue-intel" role="cell">Scales with revenue base</div>
+      </div>
+
+      <div class="roic-row hurdle-row" role="row">
+        <div class="roic-cell dim-label" role="rowheader" style="color: var(--ink-muted); font-weight: 400;">Hurdle (WACC-adjusted)</div>
+        <div class="roic-cell cost-takeout" role="cell">2.0×</div>
+        <div class="roic-cell revenue-intel" role="cell">2.0×</div>
+      </div>
+
+    </div>
+
+    <div class="methodology">
+      <span class="label">Methodology · directional sensitivity, not a forecast</span>
+      <p style="margin: 0;"><strong>Illustrative figures</strong> for a $1B Fortune-200 business unit at 50% gross margin. <strong>Cost takeout:</strong> $5M annual run-rate expense removed, $2M three-year implementation cost (severance, transition, change management not netted out). <strong>Revenue intelligence:</strong> 2 percentage-point lift on revenue capture across some combination of conversion, price realization, leakage reduction, renewal quality, and quote-cycle time, against $2M three-year AI / data / integration investment. <strong>ROIC</strong> = year-1 gross-profit impact ÷ three-year program cost. <strong>Excludes</strong> adoption friction, change-management drag, and architectural readiness gates — all of which compress the revenue-intelligence return in practice. Real capital allocation requires NPV with WACC, production-measured fidelity rates, and workflow-specific signal calibration. The purpose is not to forecast a specific enterprise result; it is to show why the denominator determines the capital allocation surface. The amplification ratio is a conceptual orientation device, not a business case.</p>
+    </div>
+  </section>
+
+  <section class="reading">
+    <p class="panel-eyebrow">How to read it</p>
+    <h3>Both clear the hurdle. Only one keeps compounding.</h3>
+    <p>Cost takeout at favorable assumptions clears the 2.0× WACC-adjusted ROIC hurdle. It is a defensible use of capital. The constraint is structural: the return is bounded by the expense removed. A $5M headcount reduction generates at most $5M in annual savings — usually less after severance, transition cost, process risk, and quality loss. Year two looks like year one. Year three looks like year one. The return surface is flat.</p>
+    <p class="muted">Revenue intelligence works on a denominator that scales with the revenue base. A 2-point capture lift on $1B is $20M of incremental revenue, which is $10M of gross profit at 50% margin. The same $2M investment that produced ~2.5× on cost takeout produces ~5× on revenue intelligence — and the lever can grow with model maturation, proprietary data accumulation, and integration depth. Year-three ROIC on the same investment can climb meaningfully as the improvement lever expands. The return surface is not flat.</p>
+    <p>The point is not that cost takeout is wrong. The point is that capital allocated to cost takeout has a known ceiling, and capital allocated to revenue intelligence has a different return surface — one that compounds against the revenue base if the workflow has signal, the architecture is ready enough to support governed execution, and the adoption infrastructure exists.</p>
+  </section>
+
+  <section class="reading">
+    <p class="panel-eyebrow">The four capital postures · revenue intelligence decision matrix</p>
+    <h3>Not every revenue workflow lives in the same posture</h3>
+    <p>The ROIC math above assumes the workflow can be deployed today. Many cannot. The decision matrix sorts revenue workflows by signal threshold and position on the token efficiency curve into four capital postures — each with a distinct deployment window and capital priority.</p>
+
+    <div class="matrix-ref">
+      <div class="matrix-cell automate">
+        <p class="label">Automate now</p>
+        <p class="name">0–6 months · capture lift</p>
+        <p class="window">Strong signal · low error consequence · architecture ready</p>
+        <p class="desc">Quote validation, leakage detection, pipeline hygiene, renewal-risk triage, guided discounting within approved bands. Deploy now; track adoption and conversion lift, not throughput. Reinvest into governance.</p>
+      </div>
+      <div class="matrix-cell build">
+        <p class="label">Build & defend</p>
+        <p class="name">24–48 months · proprietary signal</p>
+        <p class="window">High-value workflow where proprietary data, semantic integration, and operating knowledge create durable advantage</p>
+        <p class="desc">Enterprise pricing, bundled solution design, capital-equipment configuration, installed-base expansion. Capital priority is the proprietary substrate that lifts fidelity and dampens misguidance.</p>
+      </div>
+      <div class="matrix-cell sequence">
+        <p class="label">Sequence next</p>
+        <p class="name">12–24 months · prepare infrastructure</p>
+        <p class="window">Value is clear, but data, catalog, APIs, approval flows, or entitlement mapping are not ready</p>
+        <p class="desc">Catalog normalization, approval workflow redesign, CRM/ERP/CPQ data cleanup, entitlement mapping. Pre-position the substrate now — preparation work, not waiting.</p>
+      </div>
+      <div class="matrix-cell protect">
+        <p class="label">Protect & invest</p>
+        <p class="name">36+ months · deepen the data moat</p>
+        <p class="window">High consequence, regulated, ambiguous, relationship-heavy, or reputationally sensitive</p>
+        <p class="desc">Strategic negotiations, KOL engagement, reimbursement-sensitive guidance, underwriting judgment, major-account strategy. Deepen domain expertise; identify proprietary data assets.</p>
+      </div>
+    </div>
+
+    <p class="muted">The Workflow Assessor places any specific workflow into one of these quadrants based on judgment complexity, error consequence, AI capability today, and unit economics today. The Economic Multiplier tests sensitivity against your own revenue base and improvement lever assumptions.</p>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <p class="footer-meta"><strong>Gary Rikard, MBA</strong> &middot; Workflow Economics series &middot; <a href="https://www.linkedin.com/in/garyrikard" target="_blank" rel="noopener noreferrer">LinkedIn: garyrikard</a></p>
+    <p class="footer-meta" style="color: rgba(247, 244, 237, 0.6);">Synthesis of Kim, Kim, and Koning (INSEAD/HBS, 2026), Brynjolfsson, Li, and Raymond (<em>Quarterly Journal of Economics</em>, 2025), Dell&rsquo;Acqua et al. (<em>Organization Science</em>, 2025), McKinsey Global Tech Agenda 2026, and frontier model pricing trajectories.</p>
+
+    <p class="footer-section">Companion artifacts</p>
+    <p class="companion-links">
+      <a href="https://garyrikard.substack.com/p/the-revenue-intelligence-imperative" target="_blank" rel="noopener noreferrer">The Revenue Intelligence Imperative</a>
+      <span class="sep">&middot;</span>
+      <a href="https://grikard.github.io/revenue-intelligence-framework/">Revenue Intelligence Amplification Framework</a>
+      <span class="sep">&middot;</span>
+      <a href="https://grikard.github.io/token-efficiency-framework/">Token Efficiency Framework</a>
+      <span class="sep">&middot;</span>
+      <a href="https://grikard.github.io/revenue-intelligence-calculator/">Revenue Intelligence Economic Multiplier</a>
+    </p>
+  </div>
+</footer>
+</div>
+
+</body>
+</html>
